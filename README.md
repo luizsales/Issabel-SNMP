@@ -22,7 +22,20 @@ Descomentando as seguintes linhas:
 subagent=yes
 enable=yes
 ```
+**Configurando o SNMP AgentX**
+Configurar o SNMP AgentX Protocol e o acesso do Asterisk SNMP subagent ao SNMP master daemon.
+ 
 
+Vamos inserir em /etc/snmp/snmpd.conf 2 linhas
+```
+# Enable AgentX support
+master agentx
+
+# Set permissions on AgentX socket and containing
+# directory such that process in group 'asterisk'
+# will be able to connect
+agentXPerms  0660 0550 nobody asterisk
+```
 
  
 
