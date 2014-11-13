@@ -5,7 +5,7 @@ SNMP no Elastix
 
 No CentOS, CentOS release 5.9 (Final), vamos instalar o "net-snmp" e o "net-snmp-utils": 
 ```
-# yum install net-snmp net-snmp-utils 
+#yum install -y net-snmp net-snmp-utils net-snmp-devel bzip2 bzip2-devel lm_sensors lm_sensors-devel newt newt-devel
 ```
 Copiar as MIBS para /usr/share/snmp/mibs
 ```
