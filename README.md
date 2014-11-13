@@ -18,9 +18,10 @@ cp DIGIUM-MIB.txt /usr/share/snmp/mibs
 Edite o arquivo /etc/asterisk/res_snmp.conf 
 
 Descomentando as seguintes linhas:
+```
 subagent=yes
 enable=yes
-
+```
 
 
  
