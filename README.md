@@ -13,19 +13,9 @@ cp ASTERISK-MIB.txt /usr/share/snmp/mibs
 cp DIGIUM-MIB.txt /usr/share/snmp/mibs
 ```
 
-**Configurando o SNMP**
-
-Edite o arquivo /etc/asterisk/res_snmp.conf 
-
-Descomentando as seguintes linhas:
-```
-subagent=yes
-enable=yes
-```
 **Configurando o SNMP AgentX**
 Configurar o SNMP AgentX Protocol e o acesso do Asterisk SNMP subagent ao SNMP master daemon.
  
-
 Vamos inserir em /etc/snmp/snmpd.conf 2 linhas
 ```
 # Enable AgentX support
@@ -37,6 +27,24 @@ master agentx
 agentXPerms  0660 0550 nobody asterisk
 ```
 
- 
 
+**Configurando o SNMP**
+
+Edite o arquivo /etc/asterisk/res_snmp.conf 
+
+Descomentando as seguintes linhas:
+```
+subagent=yes
+enable=yes
+```
+
+**Reinicie o serviço do snmp**
+```
+#service snmpd restart
+```
+
+Altere as permissões de /var/agentx .
+```
+chmod 755 /var/agentx
+```
 
