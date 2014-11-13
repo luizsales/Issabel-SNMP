@@ -48,3 +48,7 @@ Altere as permissões de /var/agentx .
 chmod 755 /var/agentx
 ```
 
+No prompt do asterisk habilitar o modulo snmp
+
+#rasterisk
+CLI> module load res_snmp.so
