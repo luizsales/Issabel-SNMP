@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum install -y curl-devel popt gmime-devel uuid-devel libtermcap-devel libxml2-devel sqlite sqlite-devel ncurses-devel mysql-devel
+yum install -y curl-devel popt gmime-devel uuid-devel libtermcap-devel libxml2-devel sqlite sqlite-devel ncurses-devel mysql-devel subversion
 
 cd /usr/src
 
